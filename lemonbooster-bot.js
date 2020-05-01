@@ -21,8 +21,10 @@ bot.start((ctx) => {
 bot.help( (ctx) => {
     ctx.reply(`
     
+    Hey! Look, i can do this.
+
     /Enumeration ---> Executes Enumeration 
-    /Monitoring ---> Executes Monitoring :performing_arts:
+    /Monitoring ---> Executes Monitoring
 
     `);
 });
