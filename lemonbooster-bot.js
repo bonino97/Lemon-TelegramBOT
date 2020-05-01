@@ -30,6 +30,9 @@ bot.help( (ctx) => {
 });
 
 bot.command(['Enumeration', 'enumeration', 'ENUMERATION'], (ctx) =>{
+    
+    ctx.reply('Well you want to update, executing Subdomain Enumeration...');
+
     fetch('http://monitoring.lemonsec.com/Enumeration')
         .then(res => {
             if(res.ok){
@@ -43,6 +46,9 @@ bot.command(['Enumeration', 'enumeration', 'ENUMERATION'], (ctx) =>{
 });
 
 bot.command(['Monitoring','monitoring','MONITORING'], (ctx) =>{
+
+    ctx.reply('Nice decision, executing Monitoring...');
+
     fetch('http://monitoring.lemonsec.com/Monitoring')
         .then(res => {
             if(res.ok){
