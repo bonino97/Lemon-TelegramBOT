@@ -18,7 +18,7 @@ bot.help( (ctx) => {
 });
 
 bot.command(['Enumeration', 'enumeration', 'ENUMERATION'], (ctx) =>{
-    fetch('http://localhost:3001/Enumeration')
+    fetch('http://monitoring.lemonsec.com/Enumeration')
         .then(res => {
             if(res.ok){
                 ctx.reply('Ok!')
@@ -28,7 +28,7 @@ bot.command(['Enumeration', 'enumeration', 'ENUMERATION'], (ctx) =>{
 });
 
 bot.command(['Monitoring','monitoring','MONITORING'], (ctx) =>{
-    fetch('http://localhost:3001/Monitoring')
+    fetch('http://monitoring.lemonsec.com/Monitoring')
         .then(res => {
             if(res.ok){
                 ctx.reply('Ok!')
