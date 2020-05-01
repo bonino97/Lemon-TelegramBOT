@@ -9,7 +9,12 @@ const botKey = '1075658805:AAEyt1oljdw-DvDSU7pN691fnCetUNYeuUA';
 const bot = new Telegraf(botKey);
 
 bot.start((ctx) => {
-    ctx.reply('Welcome');
+    ctx.reply('Welcome!');
+});
+
+bot.help( (ctx) => {
+    ctx.reply('/Enumeration ---> Executes Enumeration')
+    ctx.reply('/Monitoring ---> Executes Monitoring')
 });
 
 bot.command(['Enumeration', 'enumeration', 'ENUMERATION'], (ctx) =>{
