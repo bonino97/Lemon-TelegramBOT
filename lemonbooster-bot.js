@@ -31,15 +31,12 @@ bot.help( (ctx) => {
 
 bot.command(['Enumeration', 'enumeration', 'ENUMERATION'], (ctx) =>{
     
-    ctx.reply('Well you want to update, executing Subdomain Enumeration...');
+    ctx.reply('You need an update, executing Subdomain Enumeration...');
 
     fetch('http://monitoring.lemonsec.com/Enumeration')
         .then(res => {
             if(res.ok){
                 ctx.reply('Subdomain Enumeration Finish Correctly!')
-            } else {
-                ctx.reply('Subdomain Enumeration Fail...')
-                ctx.reply('Response: ', res.msg)
             }
         })
         .catch(err => ctx.reply(err))
@@ -53,9 +50,6 @@ bot.command(['Monitoring','monitoring','MONITORING'], (ctx) =>{
         .then(res => {
             if(res.ok){
                 ctx.reply('Monitoring Finish Correctly!')
-            } else {
-                ctx.reply('Monitoring Fail...')
-                ctx.reply('Response: ', res.msg)
             }
         })
         .catch(err => ctx.reply(err))
