@@ -25,6 +25,7 @@ bot.help( (ctx) => {
 
     /Enumeration ---> Executes Enumeration 
     /Monitoring ---> Executes Monitoring
+    /Takeover ---> Scan Subdomain Takeovers
 
     `);
 });
@@ -50,6 +51,19 @@ bot.command(['Monitoring','monitoring','MONITORING'], (ctx) =>{
         .then(res => {
             if(res.ok){
                 ctx.reply('Monitoring Finish Correctly!')
+            }
+        })
+        .catch(err => ctx.reply(err))
+});
+
+bot.command(['Takeover','takeover','TAKEOVER'], (ctx) =>{
+
+    ctx.reply('Scanning for Subdomain Takeovers...');
+
+    fetch('http://monitoring.lemonsec.com/Takeover')
+        .then(res => {
+            if(res.ok){
+                ctx.reply('Subdomain Takeover Finish Correctly!')
             }
         })
         .catch(err => ctx.reply(err))
