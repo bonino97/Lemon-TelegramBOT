@@ -11,9 +11,9 @@ const bot = new Telegraf(botKey);
 bot.start((ctx) => {
     ctx.reply(`
     
-    ~Welcome to LemonBooster Bot~
+~Welcome to LemonBooster Bot~
 
-    Send me a message with /help to know the functions that i can execute! 👍
+Send me a message with /help to know the functions that i can execute! 👍
 
     `);
 });
@@ -21,12 +21,12 @@ bot.start((ctx) => {
 bot.help( (ctx) => {
     ctx.reply(`
     
-    Hey! Look, i can do this.
+Hey! Look, i can do this.
 
-    /Enumeration ---> Executes Enumeration 
-    /Monitoring ---> Executes Monitoring
-    /Takeover ---> Scan Subdomain Takeovers
-
+/Enumeration ---> Executes Enumeration 
+/Monitoring ---> Executes Monitoring
+/Takeover ---> Executes Subdomain Takeovers Scan
+ 
     `);
 });
 
