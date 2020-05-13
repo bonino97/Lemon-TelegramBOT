@@ -51,6 +51,8 @@ bot.command(['Monitoring','monitoring','MONITORING'], (ctx) =>{
         .then(res => {
             if(res.ok){
                 ctx.reply('Monitoring Finish Correctly!')
+            } else {
+                ctx.reply('Fail')
             }
         })
         .catch(err => ctx.reply(err))
